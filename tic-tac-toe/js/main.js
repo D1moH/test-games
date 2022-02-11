@@ -4,7 +4,7 @@ const resetBtn = document.getElementById('reset');
 const contentWrapper = document.getElementById('content');
 const modalResult = document.getElementById('modal-result-wrapper');
 const overlay = document.getElementById('overlay');
-const aiPlayer = 'X', huPlayer = 'O';
+const aiPlayer = 'O', huPlayer = 'X';
 
 
 class Game {
@@ -55,7 +55,7 @@ class Game {
             return;
             }
         if (this.checkWinner(this.board, huPlayer)) {
-            result.innerHTML = '<h1>Ты ПОБЕДИЛ!</h1><h2>Поздравляем!!!</h2>';
+            result.innerHTML = '<h1>Ты ПОБЕДИЛ!</h1>';
             prerareResult('<h1>ТЫ </h1>');
             return;
             } 
