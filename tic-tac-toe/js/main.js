@@ -31,7 +31,7 @@ class Game {
             cell.addEventListener('click', this.humanPlay());
             game.appendChild(cell);
             this.cellList.push(cell);
-        }
+        } 
     }
 
     resetGame() {
@@ -47,6 +47,11 @@ class Game {
         return (e) => {
             this.turnCount += 1;
             const id = e.target.getAttribute('data-id');
+            
+            if (id === null) {
+                return; 
+            }
+            
             this.board[+id] = huPlayer;
             this.cellList[+id].innerHTML = `<span>${huPlayer}</span>`;
         if (this.turnCount >= this.limit) {
